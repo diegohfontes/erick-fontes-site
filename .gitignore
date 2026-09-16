@@ -1,1 +1,4 @@
 .DS_Store
+
+# Nunca versionar: credencial de API do cPanel (DNS)
+.cpanel-credentials
