@@ -68,8 +68,13 @@ img { display: block; max-width: 100%; }
 }
 
 .site-header .wordmark {
-  font-size: 32px;
-  color: var(--color-text-on-dark);
+  display: block;
+}
+
+.logo-img {
+  display: block;
+  height: 40px;
+  width: auto;
 }
 
 .site-header nav {
@@ -314,7 +319,7 @@ section {
   border-top: 1px solid rgba(241,236,227,0.15);
 }
 
-.site-footer .wordmark { font-size: 22px; }
+.site-footer .logo-img { height: 26px; }
 
 .site-footer nav { display: flex; gap: var(--space-2); }
 
