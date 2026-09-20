@@ -278,6 +278,19 @@ section {
 
 .btn-outline:hover { background: var(--color-text-on-light); color: var(--color-bg-light); }
 
+/* Bio */
+.bio {
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.bio .section-text {
+  margin: 0 auto;
+  max-width: 68ch;
+}
+
 /* Instagram */
 .instagram {
   text-align: center;
@@ -288,6 +301,86 @@ section {
   font-size: clamp(32px, 5vw, 48px);
   color: var(--color-primary);
   text-decoration: none;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  text-align: left;
+}
+
+.instagram-grid .instagram-media {
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.instagram-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-secondary);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  text-align: center;
+  text-decoration: none;
+  padding: var(--space-2);
+}
+
+.instagram-fallback:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+@media (max-width: 900px) {
+  .instagram-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .instagram-grid { grid-template-columns: 1fr; }
+}
+
+/* Parceiros */
+.partners {
+  text-align: center;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 220px));
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.partner-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  padding: var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+}
+
+.partner-card img {
+  max-width: 100%;
+  max-height: 56px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 /* Contato */
